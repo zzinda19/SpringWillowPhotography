@@ -1,47 +1,39 @@
+body * {
+    font-size: 16px;
+}
+
 .title h2 {
-    font-size: 2em;
+    font-size: 32px;
 }
 
 .subtitle h3 {
-    font-size: 1.25em;
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
 .content {
     width: 100%;
-    padding: 15px;
+    padding: 10px 10px 0px 10px;
     margin: 0px;
-}
-
-.section {
-    flex-direction: column;
-    align-items: center;
 }
 
 p {
     padding: 10px;
-    font-size: 1.15em;
-}
-
-#about_1 {
-    flex-direction: column-reverse;
-}
-
-.secondary-text {
-    width: 100%;
 }
 
 .secondary-image {
-    width: 70%;
+    width: 100%;
     height: auto;
-    max-width: 400px;
-    max-height: 400px;
-    padding: 10px;
 }
 
-@media only screen and (max-width: 600px) {
-    .secondary-image {
-        width: 100%;
-        height: auto;
-    }
+.list-body {
+    padding: 10px 0px 10px 10px;
+}
+
+.icon-bar a {
+    font-size: 25px;
+}
+
+.copyright p {
+    font-size: 14px;
 }
