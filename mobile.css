@@ -1,5 +1,47 @@
+.title h2 {
+    font-size: 2em;
+}
+
+.subtitle h3 {
+    font-size: 1.25em;
+    margin-bottom: 10px;
+}
+
 .content {
     width: 100%;
     padding: 15px;
     margin: 0px;
+}
+
+.section {
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    padding: 10px;
+    font-size: 1.15em;
+}
+
+#about_1 {
+    flex-direction: column-reverse;
+}
+
+.secondary-text {
+    width: 100%;
+}
+
+.secondary-image {
+    width: 70%;
+    height: auto;
+    max-width: 400px;
+    max-height: 400px;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px) {
+    .secondary-image {
+        width: 100%;
+        height: auto;
+    }
 }

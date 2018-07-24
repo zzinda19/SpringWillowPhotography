@@ -79,8 +79,11 @@ main {
     align-items: center;
     width: 75%;
     margin-top: 25px;
-    margin-bottom: 25px;
     color: #373F27;
+}
+
+.spacer {
+    height: 90px;
 }
 
 .title {
@@ -93,15 +96,51 @@ main {
     font-size: 3em;
 }
 
-.primary-text {
-    flex-direction: column;
-    margin-bottom: 25px;
+.subtitle {
+    justify-content: center;
 }
 
-.primary-text p {
-    padding-top: 15px;
+.subtitle h3 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: normal;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #373F27;
+}
+
+.section {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.primary-text {
+    flex-direction: column;
+    width: 100%;
+}
+
+p {
+    padding: 15px;
     font-size: 1.25em;
     line-height: 1.25em;
+}
+
+.secondary-text {
+    flex-direction: column;
+    width: 70%;
+}
+
+.secondary-image {
+    align-items: flex-start;
+    width: 30%;
+    height: auto;
+    padding: 15px;
+}
+
+.secondary-image img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
 }
 
 .outline-button {
@@ -109,6 +148,8 @@ main {
     align-items: center;
     width: 200px;
     height: 50px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     border: 1px solid #373F27;
     background-color: #FFFFFF;
     color: #373F27;
@@ -153,4 +194,5 @@ footer {
     text-align: center;
     font-size: 1em;
     line-height: 1.5em;
+    padding: 0px;
 }
