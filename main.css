@@ -1,0 +1,156 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body * {
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+header {
+    justify-content: space-between;
+    background-color: transparent;
+    width: 100%;
+    position: absolute;
+    top: 15px;
+    height: 75px;
+    padding: 0px 50px 0px 50px;
+    color: #EAC67A;
+}
+
+.logo h1 {
+    align-items: center;
+    height: 100%;
+    font-family: "DancingScriptOT";
+    font-size: 2.5em;
+    z-index: 1;
+}
+
+nav {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    z-index: 1;
+}
+
+nav ul {
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 75%;
+    border: solid #EAC67A;
+    border-width: 1px 0px 1px 0px;
+}
+
+nav li {
+    align-items: center;
+    padding: 0px 10px 0px 10px;
+}
+
+nav a {
+    text-align: center;
+    text-decoration: none;
+    color: #EAC67A;
+}
+
+main {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.cover {
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.cover-image {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.content {
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    color: #373F27;
+}
+
+.title {
+    justify-content: center;
+}
+
+.title h2 {
+    text-align: center;
+    font-family: "DancingScriptOT";
+    font-size: 3em;
+}
+
+.primary-text {
+    flex-direction: column;
+    margin-bottom: 25px;
+}
+
+.primary-text p {
+    padding-top: 15px;
+    font-size: 1.25em;
+    line-height: 1.25em;
+}
+
+.outline-button {
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+    border: 1px solid #373F27;
+    background-color: #FFFFFF;
+    color: #373F27;
+    text-decoration: none;
+    font-size: 1.25em;
+    transition: all 0.1s ease-in-out;
+}
+
+.outline-button:hover {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #373F27;
+}
+
+footer {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    color: #636B46;
+}
+
+.icon-bar a {
+    padding: 0px 15px 15px 15px;
+    text-decoration: none;
+    font-size: 2em;
+    color: #636B46;
+    transition: color 0.3s ease-out;
+}
+
+.icon-bar a:hover {
+    color: #373F27;
+}
+
+.copyright {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.copyright p {
+    text-align: center;
+    font-size: 1em;
+    line-height: 1.5em;
+}
