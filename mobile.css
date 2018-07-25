@@ -25,10 +25,28 @@ header {
     margin: 0px;
 }
 
+.spacer {
+    height: 50px;
+}
+
+#portfolio {
+    width: 100%;
+}
+
 .column {
     flex: 100%;
     justify-content: flex-start;
     max-width: 100%;
+}
+
+#col-3 {
+    flex: 100%;
+    padding: 0 5px;
+}
+
+#col-3 img {
+    width: 100%;
+    padding: 0;
 }
 
 p {

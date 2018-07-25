@@ -51,6 +51,24 @@ nav a:hover {
     align-items: center;
 }
 
+.column {
+    flex: 50%;
+}
+
+#portfolio {
+    width: 125%;
+}
+
+#col-3 {
+    flex: 100%;
+    padding: 0px;
+}
+
+#col-3 img {
+    width: 50%;
+    padding: 0 2.5px;
+}
+
 .secondary-text {
     width: 100%;
 }
