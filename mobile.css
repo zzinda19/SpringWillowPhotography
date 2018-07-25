@@ -17,7 +17,6 @@ header {
 
 .subtitle h3 {
     font-size: 20px;
-    margin-bottom: 10px;
 }
 
 .content {
@@ -30,13 +29,33 @@ p {
     padding: 10px;
 }
 
+#about-img-1 {
+    float: none;
+}
+
+#about-img-2 {
+    float: none;
+}
+
 .secondary-image {
+    justify-content: center;
     width: 100%;
-    height: auto;
+    max-width: inherit;
+    max-height: inherit;
+}
+
+.secondary-image img {
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .list-body {
     padding: 10px 0px 10px 10px;
+}
+
+input[type=submit] {
+    background-color: #373F27;
+    color: #FFFFFF;
 }
 
 .icon-bar a {
