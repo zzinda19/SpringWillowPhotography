@@ -2,6 +2,15 @@ body * {
     font-size: 16px;
 }
 
+header {
+    padding: 0px 10px 0px 10px;
+    height: 35px;
+}
+
+.logo h1 {
+    font-size: 24px;
+}
+
 .title h2 {
     font-size: 32px;
 }
