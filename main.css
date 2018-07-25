@@ -148,6 +148,26 @@ main {
     padding: 15px;
 }
 
+#portfolio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 5px;
+}
+
+.column {
+    flex: 33%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    padding: 0 5px;
+}
+
+.column img {
+    object-fit: contain;
+    margin-top: 8px;
+    width: 100%;
+    height: auto;
+}
+
 #pricing {
     flex-direction: row;
     justify-content: center;
@@ -353,81 +373,4 @@ footer {
 @keyframes fade {
     from {opacity: 0}
     to {opacity: 1}
-}
-
-@media only screen and (max-width: 1024px) {
-
-    .logo {
-        width: 100%;
-    }
-
-    nav {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 0;
-        width: 100%;
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0, 0.9);
-        overflow: hidden;
-    }
-
-    nav ul {
-        position: relative;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        top: 25%;
-        width: 100%;
-        text-align: center;
-        border: 0px;
-    }
-
-    nav a {
-        padding: 8px;
-        text-decoration: none;
-        color: #818181;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: #f1f1f1;
-    }
-
-    #closeDropdown {
-        position: absolute;
-        top: 20px;
-        right: 45px;
-        font-size: 60px;
-    }
-
-    .dropdown {
-        display: flex;
-    }
-
-    .section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .secondary-text {
-        width: 100%;
-    }
-
-    #pricing {
-        flex-direction: column;
-    }
-    
-    #pricing ul {
-        padding: 0px;
-        flex-direction: column;
-    }
-    
-    #pricing li {
-        padding: 5px;
-    }
-
-    .list-sep {
-        display: none;
-    }    
 }

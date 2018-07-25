@@ -25,6 +25,12 @@ header {
     margin: 0px;
 }
 
+.column {
+    flex: 100%;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
 p {
     padding: 10px;
 }
