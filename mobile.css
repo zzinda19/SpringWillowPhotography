@@ -21,7 +21,7 @@ header {
 
 .content {
     width: 100%;
-    padding: 10px 10px 0px 10px;
+    padding: 10px;
     margin: 0px;
 }
 
@@ -42,11 +42,17 @@ header {
 #col-3 {
     flex: 100%;
     padding: 0 5px;
+    margin-bottom: 8px;
 }
 
 #col-3 img {
     width: 100%;
     padding: 0;
+}
+
+.sub-column {
+    width: 100%;
+    padding: 0px;
 }
 
 p {
