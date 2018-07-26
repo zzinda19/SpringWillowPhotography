@@ -9,7 +9,8 @@
     <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="mobile.css">
     <link rel="stylesheet" type="text/css" media="screen" href="fonts.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="./images/favicon.jpg" type="image/jpg" sizes="16x16"> 
+    <link rel="icon" href="./images/favicon.jpg" type="image/jpg" sizes="16x16">
+    <script src="./mobile-navigation.js"></script>
 </head>
 <body>
 <header>
@@ -28,6 +29,25 @@
     </nav>
 </header>
 <main>
+    <div id="mobile-menu">
+        <div class="overlay">
+            <div class="overlay-content">
+                <ul>
+                    <li id="first-link"><a href="./index.html">Home</a></li>
+                    <li><a href="./portfolio.html">Portfolio</a></li>
+                    <li><a href="./investments.html">Investments &amp; FAQs</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="menu-button" onclick="toggleNav(this)">
+            <div id="menu-bar-one"></div>
+            <div id="menu-bar-two"></div>
+            <div id="menu-bar-three"></div>
+    </div>
     <div class="cover fade">
         <img class="cover-image" src="./images/optimized/home_cover.jpg" alt="Tim and Jordan Cover">
     </div>

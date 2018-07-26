@@ -14,12 +14,14 @@ body * {
 header {
     justify-content: space-between;
     background-color: transparent;
+    align-items: center;
     width: 100%;
     position: absolute;
     top: 15px;
     height: 75px;
-    padding: 0px 25px 0px 25px;
+    padding: 0px 25px;
     color: #EAC67A;
+    z-index: 1;
 }
 
 .logo h1 {
@@ -27,14 +29,12 @@ header {
     height: 100%;
     font-family: "DancingScriptOT";
     font-size: 36px;
-    z-index: 1;
 }
 
 nav {
     width: 55%;
     height: 100%;
     align-items: center;
-    z-index: 1;
     background-color: transparent;
 }
 
@@ -77,6 +77,14 @@ nav a {
     color: #EAC67A;
 }
 
+#mobile-menu {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+}
+
 main {
     flex-direction: column;
     align-items: center;
@@ -84,6 +92,7 @@ main {
 }
 
 .cover {
+    position: relative;
     width: 100%;
     height: auto;
     max-height: 100vh;
