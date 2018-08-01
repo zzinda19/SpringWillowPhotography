@@ -15,7 +15,7 @@ nav {
 .menu-button {
     display: flex;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -142,9 +142,11 @@ nav {
 
 #pricing {
     flex-direction: column;
+    width: 100%;
 }
 
 #pricing ul {
+    margin: 0px;
     padding: 0px;
     flex-direction: column;
 }

@@ -1,0 +1,141 @@
+// Declare variables.
+
+// Text & Font
+$main-font-stack: 'Georgia', 'Times New Roman', serif;
+$decorative-font: 'DancingScriptOT';
+$main-font-size: 18px;
+$main-line-height: 1.25em;
+
+$logo-font-size: 36px;
+$header-font-size: 48px;
+$nav-font-size: 16px;
+
+// Color Pallete
+$gold: #eac67a;
+$forest-green: #373F27;
+$subtle-grey: #636b46;
+
+/**
+ * SASS inheritance classes.
+ */
+ %full-center {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+ }
+
+ %ease-in {
+     transition: all 0.2s ease-in;
+ }
+
+
+/**
+ *  Core style.
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: $main-font-size;
+    line-height: $main-line-height;
+}
+
+body {
+    * {
+        box-sizing: border-box;
+        display: flex;
+        font-family: $main-font-stack;
+    }
+}
+
+
+header {
+    $main-height: 75px;
+    $main-padding: 0 25px;
+
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: $main-height;
+    position: absolute;
+    top: 15px;
+    padding: $main-padding;
+    z-index: 1;
+}
+
+.logo {
+    flex-grow: 1;
+    font-family: $decorative-font;
+    font-size: $logo-font-size;
+    color: $gold;
+}
+
+/**
+ * SASS nav nesting block.
+ */
+nav {
+    @extend %full-center;
+    height: 100%;
+    $nav-padding: 0 10px;
+
+    ul {
+        @extend %full-center;
+        height: 60%;
+        border: solid $gold;
+        border-width: 1px 0;
+    }
+
+    li {
+        @extend %full-center;
+        flex-direction: column;
+        position: relative;
+        top: 2px;
+        padding: $nav-padding;
+
+        &::after {
+            content: '';
+            width: 0;
+            height: 1px;
+            margin-top: 1px;
+            background: $gold;
+            @extend %ease-in;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+    }
+
+    a {
+        font-size: $nav-font-size;
+        color: $gold;
+        text-decoration: none;
+    }
+}
+
+main {
+    height: 300px;
+}
+
+footer {
+    @extend %full-center;
+    flex-direction: column;
+}
+
+/**
+ *  Unique pages.
+ */
+
+
+ /**
+  *  Media queries.
+  */
+
+@media screen and (max-width: 600px) {
+    @import 'mobile';
+}
+
+/**
+ * Fonts
+ */
+ @import 'fonts';
