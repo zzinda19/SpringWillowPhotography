@@ -1,4 +1,6 @@
-// Declare variables.
+/* Main Imports & Animations */
+@import 'mixins';
+@import 'animations';
 
 // Text & Font
 $main-font-stack: 'Georgia', 'Times New Roman', serif;
@@ -15,24 +17,24 @@ $gold: #eac67a;
 $forest-green: #373F27;
 $subtle-grey: #636b46;
 
-/**
- * SASS inheritance classes.
- */
+/* Inheritance Classes */
  %full-center {
      justify-content: center;
      align-items: center;
      text-align: center;
  }
 
+ %fill-superview {
+     width: 100%;
+     height: 100%;
+ }
+
  %ease-in {
-     transition: all 0.2s ease-in;
+    @include transition(all ease-in 200ms);
  }
 
 
-/**
- *  Core style.
- */
-
+/* Core */
 * {
     margin: 0;
     padding: 0;
@@ -70,13 +72,11 @@ header {
     color: $gold;
 }
 
-/**
- * SASS nav nesting block.
- */
+/* Nav Nesting */
 nav {
     @extend %full-center;
     height: 100%;
-    $nav-padding: 0 10px;
+    $nav-padding: 0 20px;
 
     ul {
         @extend %full-center;
@@ -84,14 +84,12 @@ nav {
         border: solid $gold;
         border-width: 1px 0;
     }
-
     li {
         @extend %full-center;
         flex-direction: column;
         position: relative;
         top: 2px;
         padding: $nav-padding;
-
         &::after {
             content: '';
             width: 0;
@@ -100,12 +98,10 @@ nav {
             background: $gold;
             @extend %ease-in;
         }
-
         &:hover::after {
             width: 100%;
         }
     }
-
     a {
         font-size: $nav-font-size;
         color: $gold;
@@ -114,18 +110,36 @@ nav {
 }
 
 main {
-    height: 300px;
+    @extend %full-center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cover {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    overflow: hidden;
+    opacity: 0;
+    @include animation(fade 2s 500ms);
+    @include animation-fill-mode(forwards);
+
+    &__image {
+        @extend %fill-superview;
+        object-fit: cover;
+    }
 }
 
 footer {
     @extend %full-center;
     flex-direction: column;
+    padding: 15px;
 }
 
 /**
  *  Unique pages.
  */
-
 
  /**
   *  Media queries.
@@ -135,7 +149,5 @@ footer {
     @import 'mobile';
 }
 
-/**
- * Fonts
- */
+/* Fonts */
  @import 'fonts';

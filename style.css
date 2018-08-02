@@ -1,19 +1,65 @@
-/**
- * SASS inheritance classes.
- */
-footer, nav li, nav ul, nav {
+/* Main Imports & Animations */
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@-moz-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@-ms-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@-o-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
+}
+/* Inheritance Classes */
+footer, main, nav li, nav ul, nav {
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-nav li::after {
-  transition: all 0.2s ease-in;
+.cover__image {
+  width: 100%;
+  height: 100%;
 }
 
-/**
- *  Core style.
- */
+nav li::after {
+  -webkit-transition: all ease-in 200ms;
+  -moz-transition: all ease-in 200ms;
+  -ms-transition: all ease-in 200ms;
+  -o-transition: all ease-in 200ms;
+  transition: all ease-in 200ms;
+}
+
+/* Core */
 * {
   margin: 0;
   padding: 0;
@@ -45,9 +91,7 @@ header {
   color: #eac67a;
 }
 
-/**
- * SASS nav nesting block.
- */
+/* Nav Nesting */
 nav {
   height: 100%;
 }
@@ -60,7 +104,7 @@ nav li {
   flex-direction: column;
   position: relative;
   top: 2px;
-  padding: 0 10px;
+  padding: 0 20px;
 }
 nav li::after {
   content: "";
@@ -79,11 +123,33 @@ nav a {
 }
 
 main {
-  height: 300px;
+  flex-direction: column;
+  width: 100%;
+}
+
+.cover {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 100vh;
+  overflow: hidden;
+  opacity: 0;
+  -webkit-animation: fade 2s 500ms;
+  -moz-animation: fade 2s 500ms;
+  -ms-animation: fade 2s 500ms;
+  -o-animation: fade 2s 500ms;
+  animation: fade 2s 500ms;
+  -webkit-animation-fill-mode: forwards;
+  -o-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+.cover__image {
+  object-fit: cover;
 }
 
 footer {
   flex-direction: column;
+  padding: 15px;
 }
 
 /**
@@ -98,9 +164,7 @@ footer {
     padding: 0 15px;
   }
 }
-/**
- * Fonts
- */
+/* Fonts */
 /**
  *  +-------------------------------------+
  *  |-Downloaded from fontsquirrel.com----+
