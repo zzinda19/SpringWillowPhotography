@@ -40,7 +40,7 @@
   }
 }
 /* Inheritance Classes */
-footer, main, nav li, nav ul, nav {
+.copyright, .social, footer, .action-button, .content__body, .content, main, nav li, nav ul, nav {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -51,12 +51,20 @@ footer, main, nav li, nav ul, nav {
   height: 100%;
 }
 
-nav li::after {
-  -webkit-transition: all ease-in 200ms;
-  -moz-transition: all ease-in 200ms;
-  -ms-transition: all ease-in 200ms;
-  -o-transition: all ease-in 200ms;
-  transition: all ease-in 200ms;
+.social__link, nav li::after {
+  -webkit-transition: all ease-in-out 200ms;
+  -moz-transition: all ease-in-out 200ms;
+  -ms-transition: all ease-in-out 200ms;
+  -o-transition: all ease-in-out 200ms;
+  transition: all ease-in-out 200ms;
+}
+
+.content__body {
+  margin-top: 15px;
+}
+
+.content__paragraph {
+  margin-bottom: 15px;
 }
 
 /* Core */
@@ -64,7 +72,6 @@ nav li::after {
   margin: 0;
   padding: 0;
   font-size: 18px;
-  line-height: 1.25em;
 }
 
 body * {
@@ -104,7 +111,7 @@ nav li {
   flex-direction: column;
   position: relative;
   top: 2px;
-  padding: 0 20px;
+  padding: 0 30px;
 }
 nav li::after {
   content: "";
@@ -147,9 +154,73 @@ main {
   object-fit: cover;
 }
 
+.content {
+  flex-direction: column;
+  padding: 15px 0;
+  color: #373F27;
+}
+.content__title {
+  font-family: "DancingScriptOT";
+  font-size: 48px;
+}
+.content__body {
+  flex-direction: column;
+  width: 80%;
+}
+.content__paragraph {
+  display: block;
+  text-align: left;
+  line-height: 1.3rem;
+}
+
+.action-button {
+  min-width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  border: 1px solid #373F27;
+  color: #373F27;
+  font-style: italic;
+  text-decoration: none;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+.action-button:hover {
+  background-color: #373F27;
+  color: #fff;
+}
+.action-button:active {
+  color: #eee;
+}
+
 footer {
   flex-direction: column;
   padding: 15px;
+}
+
+.social {
+  margin-bottom: 5px;
+}
+.social__link {
+  padding: 0 15px;
+  text-decoration: none;
+  font-size: 30px;
+  color: #636b46;
+}
+.social__link:hover {
+  color: #373F27;
+}
+
+.copyright {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.copyright p {
+  color: #636b46;
+  font-size: 16px;
+  line-height: 1.25rem;
 }
 
 /**
