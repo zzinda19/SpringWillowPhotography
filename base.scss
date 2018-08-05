@@ -40,11 +40,11 @@ $grey: #636b46;
  }
 
  %top-space {
-     margin-top: $main-div-padding;
+     margin-top: 10px;
  }
 
  %bottom-space {
-     margin-bottom: $main-div-padding;
+     margin-bottom: 10px;
  }
 
  %test {
@@ -86,27 +86,27 @@ header {
     flex-grow: 1;
     font-family: $decorative-font;
     font-size: $logo-font-size;
+    font-weight: bold;
     color: $gold;
 }
 
-/* Nav Nesting */
-nav {
+.navigation {
     @extend %full-center;
-    height: 100%;
-    $nav-padding: 0 30px;
+    $nav-margin: 0 30px;
+    height: 60%;
+    border: solid $gold;
+    border-width: 1px 0;
 
-    ul {
-        @extend %full-center;
-        height: 60%;
-        border: solid $gold;
-        border-width: 1px 0;
-    }
-    li {
+    &__link {
         @extend %full-center;
         flex-direction: column;
         position: relative;
         top: 2px;
-        padding: $nav-padding;
+        margin: $nav-margin;
+        font-size: $nav-font-size;
+        color: $gold;
+        text-decoration: none;
+
         &::after {
             content: '';
             width: 0;
@@ -115,14 +115,10 @@ nav {
             background: $gold;
             @extend %link-hover;
         }
+
         &:hover::after {
             width: 100%;
         }
-    }
-    a {
-        font-size: $nav-font-size;
-        color: $gold;
-        text-decoration: none;
     }
 }
 
@@ -137,6 +133,7 @@ main {
     width: 100%;
     height: auto;
     max-height: 100vh;
+    margin-bottom: 15px;
     overflow: hidden;
     opacity: 0;
     @include animation(fade 2s 500ms);
@@ -151,26 +148,26 @@ main {
 .content {
     @extend %full-center;
     flex-direction: column;
-    padding: $main-div-padding 0;
     color: $green;
+    width: 80%;
 
     &__title {
         font-family: $decorative-font;
         font-size: $title-font-size;
+        font-weight: bold;
     }
 
     &__body {
         @extend %full-center;
         @extend %top-space;
         flex-direction: column;
-        width: 80%;
     }
 
     &__paragraph {
         @extend %bottom-space;
         display: block;
         text-align: left;
-        line-height: 1.3rem;
+        line-height: 1.35em;
     }
 }
 
@@ -179,6 +176,7 @@ main {
     min-width: 200px;
     height: 50px;
     padding: 0 $main-button-padding;
+    margin: $main-button-padding 0;
     border: 1px solid $green;
     color: $green;
     font-style: italic;
@@ -198,7 +196,7 @@ main {
 footer {
     @extend %full-center;
     flex-direction: column;
-    padding: $main-div-padding;
+    margin: 10px 0;
 }
 
 .social {
@@ -206,7 +204,7 @@ footer {
     $icon-padding: 0 15px;
     @extend %full-center;
     
-    margin-bottom: 5px;
+   margin-bottom: 10px;
 
     &__link {
         padding: $icon-padding;
@@ -223,14 +221,10 @@ footer {
 
 .copyright {
     @extend %full-center;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    p {
-        color: $grey;
-        font-size: $small-font-size;
-        line-height: 1.25rem;
-    }
+    display: block;
+    color: $grey;
+    font-size: $small-font-size;
+    line-height: 1.5em;
 }
 
 /**

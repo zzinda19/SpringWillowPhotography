@@ -40,7 +40,7 @@
   }
 }
 /* Inheritance Classes */
-.copyright, .social, footer, .action-button, .content__body, .content, main, nav li, nav ul, nav {
+.copyright, .social, footer, .action-button, .content__body, .content, main, .navigation__link, .navigation {
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -51,7 +51,7 @@
   height: 100%;
 }
 
-.social__link, nav li::after {
+.social__link, .navigation__link::after {
   -webkit-transition: all ease-in-out 200ms;
   -moz-transition: all ease-in-out 200ms;
   -ms-transition: all ease-in-out 200ms;
@@ -60,11 +60,11 @@
 }
 
 .content__body {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .content__paragraph {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 /* Core */
@@ -95,38 +95,33 @@ header {
   flex-grow: 1;
   font-family: "DancingScriptOT";
   font-size: 36px;
+  font-weight: bold;
   color: #eac67a;
 }
 
-/* Nav Nesting */
-nav {
-  height: 100%;
-}
-nav ul {
+.navigation {
   height: 60%;
   border: solid #eac67a;
   border-width: 1px 0;
 }
-nav li {
+.navigation__link {
   flex-direction: column;
   position: relative;
   top: 2px;
-  padding: 0 30px;
+  margin: 0 30px;
+  font-size: 16px;
+  color: #eac67a;
+  text-decoration: none;
 }
-nav li::after {
+.navigation__link::after {
   content: "";
   width: 0;
   height: 1px;
   margin-top: 1px;
   background: #eac67a;
 }
-nav li:hover::after {
+.navigation__link:hover::after {
   width: 100%;
-}
-nav a {
-  font-size: 16px;
-  color: #eac67a;
-  text-decoration: none;
 }
 
 main {
@@ -139,6 +134,7 @@ main {
   width: 100%;
   height: auto;
   max-height: 100vh;
+  margin-bottom: 15px;
   overflow: hidden;
   opacity: 0;
   -webkit-animation: fade 2s 500ms;
@@ -156,27 +152,28 @@ main {
 
 .content {
   flex-direction: column;
-  padding: 15px 0;
   color: #373F27;
+  width: 80%;
 }
 .content__title {
   font-family: "DancingScriptOT";
   font-size: 48px;
+  font-weight: bold;
 }
 .content__body {
   flex-direction: column;
-  width: 80%;
 }
 .content__paragraph {
   display: block;
   text-align: left;
-  line-height: 1.3rem;
+  line-height: 1.35em;
 }
 
 .action-button {
   min-width: 200px;
   height: 50px;
   padding: 0 20px;
+  margin: 20px 0;
   border: 1px solid #373F27;
   color: #373F27;
   font-style: italic;
@@ -197,11 +194,11 @@ main {
 
 footer {
   flex-direction: column;
-  padding: 15px;
+  margin: 10px 0;
 }
 
 .social {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 .social__link {
   padding: 0 15px;
@@ -214,13 +211,10 @@ footer {
 }
 
 .copyright {
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-.copyright p {
+  display: block;
   color: #636b46;
   font-size: 16px;
-  line-height: 1.25rem;
+  line-height: 1.5em;
 }
 
 /**
