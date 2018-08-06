@@ -1,7 +1,30 @@
-header {
-    $mobile-height: 50px;
-    $mobile-padding: 0 15px;
+.logo {
+    flex-shrink: 2;
+    margin-right: 15px;
+    font-size: $logo-mobile-font-size;
+}
 
-    height: $mobile-height;
-    padding: $mobile-padding;
+.menu-button {
+    flex-shrink: 1;
+    width: 24px;
+}
+
+.content {
+    &__title {
+        font-size: $mobile-title-font-size;
+    }
+    &__paragraph {
+        font-size: $mobile-paragraph-font-size;
+    }
+}
+
+.social {
+    &__link {
+        padding: $mobile-icon-padding;
+        font-size: $mobile-icon-font-size;
+    }
+}
+
+.copyright {
+    font-size: $mobile-footer-font-size;
 }

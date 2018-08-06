@@ -12,15 +12,31 @@
 <body>
 <header>
     <div class="logo">Spring Willow Photography</div>
-    <div class="navigation">
-        <a class="navigation__link" href="./index.html">Home</a>
-        <a class="navigation__link" href="./portfolio.html">Portfolio</a>
-        <a class="navigation__link" href="./investments.html">Investments &amp; FAQs</a>
-        <a class="navigation__link" href="./about.html">About</a>
-        <a class="navigation__link" href="./contact.html">Contact</a>
-        <a class="navigation__link" href="http://society6.com/springwillowphotography" target="_blank">Store</a>
+    <div id="mobile-navigation-wrapper">
+        <div class="navigation">
+            <div class="navigation__list">
+                <a class="navigation__link" href="./index.html">Home</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./portfolio.html">Portfolio</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./investments.html">Investments</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./about.html">About</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./contact.html">Contact</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="http://society6.com/springwillowphotography" target="_blank">Store</a>
+            </div>
+        </div>
     </div>
 </header>
+<div id="menu-button-wrapper" onclick="toggleNav()">
+    <div class="menu-button">
+        <div class="menu-button__bar-one"></div>
+        <div class="menu-button__bar-two"></div>
+        <div class="menu-button__bar-three"></div>
+    </div>
+</div>
 <main>
     <div class="cover">
         <img class="cover__image" src="./images/optimized/home_cover.jpg" alt="Tim and Jordan Cover">
@@ -44,7 +60,6 @@
             </div>
             <a class="action-button" href="./portfolio.html">View Portfolio</a>
         </div>
-        
     </div>
 </main>
 <footer>

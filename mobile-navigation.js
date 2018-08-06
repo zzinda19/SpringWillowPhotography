@@ -1,5 +1,7 @@
-function toggleNav(x) {
-    x.classList.toggle("open");
-    y = document.getElementById("mobile-menu");
-    y.classList.toggle("open");
+function toggleNav() {
+    const x = document.getElementById("mobile-navigation-wrapper");
+    const y = document.getElementById("menu-button-wrapper");
+    [x, y].forEach(element => {
+        element.classList.toggle("open");
+    })
 }

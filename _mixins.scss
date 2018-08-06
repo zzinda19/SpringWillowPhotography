@@ -24,6 +24,14 @@
     }
 }
 
+@mixin transform($args) {
+    -webkit-transform: $args;
+    -moz-transform: $args;
+    -ms-transform: $args;
+    -o-transform: $args;
+    transform: $args;
+}
+
 @mixin animation($args) {
   -webkit-animation: $args;
   -moz-animation: $args;
