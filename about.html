@@ -4,109 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashley &amp; Daniel Reed | About</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="tablet.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="mobile.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./images/favicon.jpg" type="image/jpg" sizes="16x16">
     <script src="./mobile-navigation.js"></script>
 </head>
 <body>
 <header>
-    <div class="logo">
-        <h1>Spring Willow Photography</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./investments.html">Investments &amp; FAQs</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div id="mobile-menu">
-        <div class="overlay">
-            <div class="overlay-content">
-                <ul>
-                    <li id="first-link"><a href="./index.html">Home</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./investments.html">Investments &amp; FAQs</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
-                </ul>
+    <div class="logo">Spring Willow Photography</div>
+    <div id="mobile-navigation-wrapper">
+        <div class="navigation">
+            <div class="navigation__list">
+                <a class="navigation__link" href="./index.html">Home</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./portfolio.html">Portfolio</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./investments.html">Investments</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./about.html">About</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./contact.html">Contact</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="http://society6.com/springwillowphotography" target="_blank">Store</a>
             </div>
         </div>
     </div>
-    <div class="menu-button" onclick="toggleNav(this)">
-            <div id="menu-bar-one"></div>
-            <div id="menu-bar-two"></div>
-            <div id="menu-bar-three"></div>
+</header>
+<div id="menu-button-wrapper" onclick="toggleNav()">
+    <div class="menu-button">
+        <div class="menu-button__bar-one"></div>
+        <div class="menu-button__bar-two"></div>
+        <div class="menu-button__bar-three"></div>
     </div>
-    <div class="cover fade">
-        <img class="cover-image" src="./images/optimized/about_cover.jpg" alt="Dan and Ashley Cover">
+</div>
+<main>
+    <div class="cover">
+        <img class="cover__image" src="./images/optimized/about_cover.jpg" alt="Dan and Ashley Cover">
     </div>
     <div class="content">
-        <div class="title"><h2>Daniel &amp; Ashley Reed</h2></div>
-        <div class="subtitle"><h3>Our Heart</h3></div>
-        <div class="section">
-            <div class="secondary-text">
-                <div class="secondary-image" id="about-img-1">
-                        <img src="./images/optimized/about_1.jpg" alt="Dan and Ashley 1">
-                </div>
-                <p>
-                    Our passion for photography began after we received our own wedding photos.
-                    Looking through those memories stirred such deep emotions in our hearts. Our
-                    photographer pictured our day as a story, beautifully capturing our love for each
-                    other without making us feel uncomfortable or posed. She had given us one of
-                    the most precious gifts we could have ever asked for that day&mdash;one that will
-                    let us relive those moments for the rest of our lives. Our heart is to give
-                    that same experience to you. Whether we are capturing senior portraits or
-                    your wedding day, our desire is to give you a storybook of memories. We are
-                    only given today, tomorrow is never guaranteed, our lives are made up of
-                    constantly changing seasons. Photographs give us the ability to freeze a glimpse
-                    in time so that when future seasons come, we can look back and experience once more
-                    the journeys we have been on.
-                </p>
-                <div class="secondary-image"id="about-img-2">
-                    <img src="./images/optimized/about_2.jpg" alt="Dan and Ashley 2">
-                </div>
-                <p>
-                    For this reason, we don't use a studio location with lots of backgrounds and lights or
-                    ask you to look at the camera and smile for every photo. We will capture your list of
-                    desired portraits, but we also believe that the best images we can capture are when you
-                    are are simply being yourself. We will give direction when needed, (we definitely understand
-                    how uncomfortable it can initially feel to be in front of a camera!) but rather than posing
-                    every minute of your session, we want you to feel relaxed and connected with what is going
-                    on around you.
-                </p>
-                <p>
-                    We believe that every couple, every person, and every family has a unique and beautiful story.
-                    We love connecting with you as we learn about your story and adventures in life. We feel that the best way for
-                    us to capture who you are is to be personal. We love hearing your stories; each tells of the road you have been on to
-                    bring you to this chapter in your life. We aren't interested in simply showing up on a certain day, clicking
-                    a few photographs and then delivering them a few weeks later. If that's what you're looking for you, we are not
-                    the photographers for you. We want to give you a personal collection of photographs that allow you to share
-                    a chapter of your lives for generations to come. We want to give you the memories that will last a lifetime.
-                </p>
-            </div>  
+        <div class="content__title">Daniel &amp; Ashley Reed</div>
+        <div class="content__subtitle">Our Heart</div>
+        <div class="content__body-about">
+            <div class="content__image" id="about-image-1">
+                <img src="./images/optimized/about_1.jpg" alt="Dan and Ashley 1">
+            </div>
+            <div class="content__paragraph">
+                Our passion for photography began after we received our own wedding photos.
+                Looking through those memories stirred such deep emotions in our hearts. Our
+                photographer pictured our day as a story, beautifully capturing our love for each
+                other without making us feel uncomfortable or posed. She had given us one of
+                the most precious gifts we could have ever asked for that day&mdash;one that will
+                let us relive those moments for the rest of our lives. Our heart is to give
+                that same experience to you. Whether we are capturing senior portraits or
+                your wedding day, our desire is to give you a storybook of memories. We are
+                only given today, tomorrow is never guaranteed, our lives are made up of
+                constantly changing seasons. Photographs give us the ability to freeze a glimpse
+                in time so that when future seasons come, we can look back and experience once more
+                the journeys we have been on.
+            </div>
+            <div class="content__image" id="about-image-2">
+                <img src="./images/optimized/about_2.jpg" alt="Dan and Ashley 2">
+            </div>
+            <div class="content__paragraph">
+                For this reason, we don't use a studio location with lots of backgrounds and lights or
+                ask you to look at the camera and smile for every photo. We will capture your list of
+                desired portraits, but we also believe that the best images we can capture are when you
+                are are simply being yourself. We will give direction when needed, (we definitely understand
+                how uncomfortable it can initially feel to be in front of a camera!) but rather than posing
+                every minute of your session, we want you to feel relaxed and connected with what is going
+                on around you.
+            </div>
+            <div class="content__paragraph">
+                We believe that every couple, every person, and every family has a unique and beautiful story.
+                We love connecting with you as we learn about your story and adventures in life. We feel that the best way for
+                us to capture who you are is to be personal. We love hearing your stories; each tells of the road you have been on to
+                bring you to this chapter in your life. We aren't interested in simply showing up on a certain day, clicking
+                a few photographs and then delivering them a few weeks later. If that's what you're looking for you, we are not
+                the photographers for you. We want to give you a personal collection of photographs that allow you to share
+                a chapter of your lives for generations to come. We want to give you the memories that will last a lifetime.
+            </div>
         </div>
     </div>
 </main>
 <footer>
-    <div class="icon-bar">
-        <a href="http://www.facebook.com/SpringWillowPhotography/" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.pinterest.com/SWP2016/" class="pinterest"><i class="fa fa-pinterest"></i></a>
-        <a href="https://instagram.com/_springwillowphotography_/" class="instagram"><i class="fa fa-instagram"></i></a>
+    <div class="social">
+        <a class="social__link" href="http://www.facebook.com/SpringWillowPhotography/"><i class="fa fa-facebook"></i></a>
+        <a class="social__link" href="https://www.pinterest.com/SWP2016/"><i class="fa fa-pinterest"></i></a>
+        <a class="social__link" href="https://instagram.com/_springwillowphotography_/"><i class="fa fa-instagram"></i></a>
     </div>
     <div class="copyright">
-        <p>&copy; Copyright 2018 Spring Willow Photography.</p>
-        <p>Website Design &copy; Copyright 2018 Zachary David Zinda.</p>
+        &copy; Copyright 2018 Spring Willow Photography. <br>
+        Website Design &copy; Copyright 2018 Zachary David Zinda.
     </div>
 </footer>
 </body>

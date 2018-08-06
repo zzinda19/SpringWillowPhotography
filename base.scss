@@ -7,10 +7,12 @@ $main-font-stack: 'Georgia', 'Times New Roman', serif;
 $decorative-font: 'DancingScriptOT';
 
 $main-title-font-size: 48px;
+$main-subtitle-font-size: 28px;
 $main-paragraph-font-size: 18px;
 $main-footer-font-size: 16px;
 
 $mobile-title-font-size: 32px;
+$mobile-subtitle-font-size: 22px;
 $mobile-paragraph-font-size: 16px;
 $mobile-footer-font-size: 14px;
 
@@ -197,10 +199,21 @@ main {
         font-weight: bold;
     }
 
+    &__subtitle {
+        font-size: $main-subtitle-font-size;
+        text-decoration: underline $green;
+        padding: 10px 0;
+    }
+
     &__body {
         @extend %full-center;
         @extend %top-space;
         flex-direction: column;
+
+        &-about {
+            @extend %top-space;
+            display: block;
+        }
     }
 
     &__paragraph {
@@ -210,6 +223,31 @@ main {
         font-size: $main-paragraph-font-size;
         line-height: 1.35em;
     }
+
+    &__image {
+        @extend %full-center;
+        width: 30%;
+        max-width: 400px;
+        max-height: 400px;
+        min-width: 200px;
+        min-height: 200px;
+
+        img {
+            object-fit: contain;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+#about-image-1 {
+    float: right;
+    padding: 0 0 0 15px;
+}
+
+#about-image-2 {
+    float: left;
+    padding: 0 15px 0 0;
 }
 
 .action-button {
