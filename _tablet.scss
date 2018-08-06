@@ -1,0 +1,131 @@
+%mobile-navigation-position {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+%main-menu-button-bar {
+    width: 100%;
+    height: 3px;
+    background-color: #EAC67A;
+    @include transition(all ease-in-out 300ms);
+}
+
+%nav-open {
+    @include transition(height ease-in-out 300ms);
+}
+
+#mobile-navigation-wrapper {
+    @extend %mobile-navigation-position;
+    height: initial;
+}
+
+header {
+    padding: $header-mobile-padding;
+    height: $header-mobile-height;
+}
+
+.logo {
+    font-size: $logo-tablet-font-size;
+}
+
+.navigation {
+    @extend %mobile-navigation-position;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    border: none;
+    @include transition(opacity ease-in-out 300ms);
+
+    &__list {
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        height: 50%;
+
+        &-spacer {
+            display: flex;
+            width: 100%;
+            height: 1px;
+            background-color: $gold;
+        }
+    }
+
+    &__link {
+        position: initial;
+        font-size: 18px;
+        @include transition(color ease-in-out 200ms);
+
+        &:hover {
+            color: #fff;
+        }
+
+        &:after {
+            display: none;
+        }
+    }
+}
+
+#menu-button-wrapper {
+    display: flex;
+    cursor: pointer;
+}
+
+.menu-button {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+}
+
+.open {
+    .navigation {
+        height: 100%;
+        background-color: #000;
+        opacity: 0.9;
+    }
+
+    .menu-button {
+        position: fixed;
+        top: 25px;
+        right: 15px;
+    }
+
+    .menu-button__bar-one {
+        @include transform(rotate(45deg) translate(7px, 7.25px));
+    }
+
+    .menu-button__bar-two {
+        opacity: 0;
+    }
+
+    .menu-button__bar-three {
+        @include transform(rotate(-45deg) translate(7.25px, -7px));
+    }
+}
+
+.menu-button__bar-one {
+    @extend %main-menu-button-bar;
+    flex-shrink: 3;
+}
+
+.menu-button__bar-two {
+    @extend %main-menu-button-bar;
+    flex-shrink: 1;
+}
+
+.menu-button__bar-three {
+    @extend %main-menu-button-bar;
+    flex-shrink: 3;
+}
+
+.test {
+    border: 2px solid red;
+}
