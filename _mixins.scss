@@ -1,7 +1,5 @@
-@mixin transition($args) {
+@mixin transition($args...) {
     -webkit-transition: $args;
-    -moz-transition: $args;
-    -ms-transition: $args;
     -o-transition: $args;
     transition: $args;
 }
@@ -10,15 +8,6 @@
     @-webkit-keyframes #{$animation-name} {
         @content;
     }
-    @-moz-keyframes #{$animation-name} {
-        @content;
-    }  
-    @-ms-keyframes #{$animation-name} {
-        @content;
-    }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }  
     @keyframes #{$animation-name} {
         @content;
     }
@@ -35,7 +24,6 @@
 @mixin animation($args) {
   -webkit-animation: $args;
   -moz-animation: $args;
-  -ms-animation: $args;
   -o-animation: $args;
   animation: $args;      
 }
@@ -43,7 +31,6 @@
 @mixin animation-delay($time) {
     -webkit-animation-delay: #{$time};
     -moz-animation-delay: #{$time};
-    -ms-animation-delay: #{$time};
     -o-animation-delay: #{$time};
     animation-delay: #{$time};      
 }
@@ -52,4 +39,20 @@
     -webkit-animation-fill-mode: #{$direction};
     -o-animation-fill-mode: #{$direction};
     animation-fill-mode: #{$direction};      
+}
+
+@mixin placeholder {
+    ::placeholder {@content};
+    ::-webkit-input-placeholder {@content};
+    :-moz-placeholder {@content};
+    ::-moz-placeholder {@content};
+    :-ms-input-placeholder {@content};
+    ::-ms-input-placeholder {@content};
+}
+
+@mixin ios-form-fix {
+    -webkit-appearance: none;
+    appearance: none;
+    -webkit-border-radius: none;
+    border-radius: none;
 }

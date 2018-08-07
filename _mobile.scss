@@ -48,10 +48,11 @@ $mobile-div-padding: 10px;
             font-size: $mobile-paragraph-font-size;
         }
     }
-    &__image {
-        width: 75%;
-        height: auto;
+
+    &__footnote {
+        font-size: $mobile-paragraph-font-size;
     }
+
 }
 
 %mobile-test {
@@ -76,16 +77,24 @@ $mobile-div-padding: 10px;
     font-size: $mobile-paragraph-font-size;
 }
 
-.social {
-    &__link {
-        padding: $mobile-icon-padding;
-        font-size: $mobile-icon-font-size;
-    }
+input {
+    font-size: $mobile-paragraph-font-size;
+}
+
+@include placeholder {
+    font-size: $mobile-paragraph-font-size;
 }
 
 footer {
     width: 100%;
     padding: 0 10px;
+}
+
+.social {
+    &__link {
+        padding: $mobile-icon-padding;
+        font-size: $mobile-icon-font-size;
+    }
 }
 
 .copyright {

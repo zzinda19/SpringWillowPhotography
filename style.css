@@ -1,41 +1,17 @@
 /* Main Imports & Animations */
 @-webkit-keyframes fade {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
-    opacity: 100;
-  }
-}
-@-moz-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-@-ms-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 100;
-  }
-}
-@-o-keyframes fade {
-  0% {
-    opacity: 0;
-  }
-  100% {
+  to {
     opacity: 100;
   }
 }
 @keyframes fade {
-  0% {
+  from {
     opacity: 0;
   }
-  100% {
+  to {
     opacity: 100;
   }
 }
@@ -51,10 +27,8 @@
   height: 100%;
 }
 
-.social__link, .navigation__link::after {
+.social__link, .content__link, .navigation__link::after {
   -webkit-transition: all ease-in-out 200ms;
-  -moz-transition: all ease-in-out 200ms;
-  -ms-transition: all ease-in-out 200ms;
   -o-transition: all ease-in-out 200ms;
   transition: all ease-in-out 200ms;
 }
@@ -67,12 +41,10 @@
   margin-bottom: 10px;
 }
 
-#menu-button-wrapper, .logo, header {
-  -webkit-transition: all ease-in-out 300ms;
-  -moz-transition: all ease-in-out 300ms;
-  -ms-transition: all ease-in-out 300ms;
-  -o-transition: all ease-in-out 300ms;
-  transition: all ease-in-out 300ms;
+.action-button {
+  -webkit-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  -o-transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
 }
 
 /* Core */
@@ -164,15 +136,10 @@ main {
   max-height: 100vh;
   margin-bottom: 15px;
   overflow: hidden;
-  opacity: 0;
-  -webkit-animation: fade 2s 500ms;
-  -moz-animation: fade 2s 500ms;
-  -ms-animation: fade 2s 500ms;
-  -o-animation: fade 2s 500ms;
-  animation: fade 2s 500ms;
-  -webkit-animation-fill-mode: forwards;
-  -o-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+  -webkit-animation: fade 2s;
+  -moz-animation: fade 2s;
+  -o-animation: fade 2s;
+  animation: fade 2s;
 }
 .cover__image {
   object-fit: cover;
@@ -180,7 +147,7 @@ main {
 
 .content {
   flex-direction: column;
-  color: #373F27;
+  color: #1f3d0c;
   width: 75%;
 }
 .content__title {
@@ -190,7 +157,7 @@ main {
 }
 .content__subtitle {
   font-size: 28px;
-  border-bottom: 1px solid #373F27;
+  border-bottom: 1px solid #1f3d0c;
 }
 .content__body {
   flex-direction: column;
@@ -226,6 +193,29 @@ main {
   width: 100%;
   height: auto;
 }
+.content__link {
+  display: inline;
+  text-decoration: none;
+  border-bottom: 1px solid #1f3d0c;
+  color: #1f3d0c;
+}
+.content__link:hover {
+  color: #eac67a;
+  border-bottom-color: #eac67a;
+}
+.content__form {
+  flex-direction: column;
+  width: 100%;
+}
+.content__footnote {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-style: italic;
+  text-align: right;
+  color: #636b46;
+}
 
 .pricing {
   font-size: 18px;
@@ -234,9 +224,9 @@ main {
   margin: 0 10px;
 }
 
-#FAQ-Header {
+#faq-title {
   padding-bottom: 10px;
-  border: solid #373F27;
+  border: solid #1f3d0c;
   border-width: 0 0 1px 0;
 }
 
@@ -250,33 +240,102 @@ main {
   padding: 0 15px 0 0;
 }
 
+#contact-subtitle {
+  font-style: italic;
+  border: none;
+}
+
 .action-button {
   min-width: 200px;
   height: 50px;
   padding: 0 20px;
   margin: 20px 0;
-  border: 1px solid #373F27;
-  color: #373F27;
+  border: 1px solid #1f3d0c;
+  color: #1f3d0c;
   font-style: italic;
   font-size: 18px;
+  background-color: #fff;
   text-decoration: none;
-  -webkit-transition: all 300ms ease-in-out;
-  -moz-transition: all 300ms ease-in-out;
-  -ms-transition: all 300ms ease-in-out;
-  -o-transition: all 300ms ease-in-out;
-  transition: all 300ms ease-in-out;
 }
 .action-button:hover {
-  background-color: #373F27;
+  background-color: #1f3d0c;
   color: #fff;
 }
 .action-button:active {
   color: #eee;
 }
 
+textarea, input {
+  min-height: 35px;
+  display: flex;
+  align-items: flex-end;
+  font-style: italic;
+  color: #1f3d0c;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+  -webkit-border-radius: none;
+  border-radius: none;
+}
+
+input {
+  font-size: 18px;
+  border: 0 solid #1f3d0c;
+  border-bottom-width: 1px;
+  margin-top: 5px;
+}
+
+textarea {
+  margin-top: 15px;
+  border: none;
+  resize: none;
+}
+
+::placeholder {
+  text-align: left;
+  font-size: 18px;
+  color: #636b46;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder {
+  text-align: left;
+  font-size: 18px;
+  color: #636b46;
+  opacity: 1;
+}
+
+:-moz-placeholder {
+  text-align: left;
+  font-size: 18px;
+  color: #636b46;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  text-align: left;
+  font-size: 18px;
+  color: #636b46;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  text-align: left;
+  font-size: 18px;
+  color: #636b46;
+  opacity: 1;
+}
+
+::-ms-input-placeholder {
+  text-align: left;
+  font-size: 18px;
+  color: #636b46;
+  opacity: 1;
+}
+
 footer {
   flex-direction: column;
-  margin: 10px 0;
+  padding: 5px 0;
 }
 
 .social {
@@ -289,7 +348,7 @@ footer {
   color: #636b46;
 }
 .social__link:hover {
-  color: #373F27;
+  color: #1f3d0c;
 }
 
 .copyright {
@@ -313,8 +372,6 @@ footer {
     height: 3px;
     background-color: #EAC67A;
     -webkit-transition: all ease-in-out 300ms;
-    -moz-transition: all ease-in-out 300ms;
-    -ms-transition: all ease-in-out 300ms;
     -o-transition: all ease-in-out 300ms;
     transition: all ease-in-out 300ms;
   }
@@ -341,15 +398,11 @@ footer {
     overflow: hidden;
     border: none;
     -webkit-transition: opacity ease-in-out 300ms;
-    -moz-transition: opacity ease-in-out 300ms;
-    -ms-transition: opacity ease-in-out 300ms;
     -o-transition: opacity ease-in-out 300ms;
     transition: opacity ease-in-out 300ms;
   }
   .navigation__list {
     -webkit-transition: width ease-out 300ms;
-    -moz-transition: width ease-out 300ms;
-    -ms-transition: width ease-out 300ms;
     -o-transition: width ease-out 300ms;
     transition: width ease-out 300ms;
     flex-direction: column;
@@ -367,8 +420,6 @@ footer {
     position: initial;
     font-size: 18px;
     -webkit-transition: color ease-in-out 200ms;
-    -moz-transition: color ease-in-out 200ms;
-    -ms-transition: color ease-in-out 200ms;
     -o-transition: color ease-in-out 200ms;
     transition: color ease-in-out 200ms;
   }
@@ -458,8 +509,6 @@ footer {
 
   .navigation__list {
     -webkit-transition: width ease-in-out 300ms;
-    -moz-transition: width ease-in-out 300ms;
-    -ms-transition: width ease-in-out 300ms;
     -o-transition: width ease-in-out 300ms;
     transition: width ease-in-out 300ms;
     width: 75%;
@@ -488,9 +537,8 @@ footer {
   .content__paragraph-list-body {
     font-size: 16px;
   }
-  .content__image {
-    width: 75%;
-    height: auto;
+  .content__footnote {
+    font-size: 16px;
   }
 
   .pricing {
@@ -511,9 +559,32 @@ footer {
     font-size: 16px;
   }
 
-  .social__link {
-    padding: 0 10px;
-    font-size: 26px;
+  input {
+    font-size: 16px;
+  }
+
+  ::placeholder {
+    font-size: 16px;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 16px;
+  }
+
+  :-moz-placeholder {
+    font-size: 16px;
+  }
+
+  ::-moz-placeholder {
+    font-size: 16px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 16px;
+  }
+
+  ::-ms-input-placeholder {
+    font-size: 16px;
   }
 
   footer {
@@ -521,22 +592,27 @@ footer {
     padding: 0 10px;
   }
 
+  .social__link {
+    padding: 0 10px;
+    font-size: 26px;
+  }
+
   .copyright {
     font-size: 14px;
   }
 }
 /* Fonts */
-/**
- *  +-------------------------------------+
- *  |-Downloaded from fontsquirrel.com----+
- *  |-Converted using font-converter.net.-+
- *  +-------------------------------------+
- */
 @font-face {
   font-family: "DancingScriptOT";
   src: url("./fonts/DancingScript-Regular.eot");
   /* IE9 Compat Modes */
-  src: url("./fonts/DancingScript-Regular.eot?#iefix") format("embedded-opentype"), url("./fonts/DancingScript-Regular.otf") format("opentype"), url("./fonts/DancingScript-Regular.svg") format("svg"), url("./fonts/DancingScript-Regular.ttf") format("truetype"), url("./fonts/DancingScript-Regular.woff") format("woff"), url("./fonts/DancingScript-Regular.woff2") format("woff2");
+  src: url("./fonts/DancingScript-Regular.eot?#iefix") format("embedded-opentype");
+  /* IE6-IE8 */
+  src: url("./fonts/DancingScript-Regular.otf") format("opentype"), url("./fonts/DancingScript-Regular.svg") format("svg"), url("./fonts/DancingScript-Regular.ttf") format("truetype");
+  /* Safari, Android, iOS */
+  src: url("./fonts/DancingScript-Regular.woff") format("woff");
+  /* Modern Browsers */
+  src: url("./fonts/DancingScript-Regular.woff2") format("woff2");
   /* Modern Browsers */
   font-weight: normal;
   font-style: normal;

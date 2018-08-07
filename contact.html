@@ -4,101 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashley &amp; Daniel Reed | Contact</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="tablet.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="mobile.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./images/favicon.jpg" type="image/jpg" sizes="16x16">
     <script src="./mobile-navigation.js"></script>
 </head>
 <body>
 <header>
-    <div class="logo">
-        <h1>Spring Willow Photography</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./investments.html">Investments &amp; FAQs</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div id="mobile-menu">
-        <div class="overlay">
-            <div class="overlay-content">
-                <ul>
-                    <li id="first-link"><a href="./index.html">Home</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./investments.html">Investments &amp; FAQs</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
-                </ul>
+    <div class="logo">Spring Willow Photography</div>
+    <div id="mobile-navigation-wrapper">
+        <div class="navigation">
+            <div class="navigation__list">
+                <a class="navigation__link" href="./index.html">Home</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./portfolio.html">Portfolio</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./investments.html">Investments &amp; FAQs</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./about.html">About</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./contact.html">Contact</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="http://society6.com/springwillowphotography" target="_blank">Store</a>
             </div>
         </div>
     </div>
-    <div class="menu-button" onclick="toggleNav(this)">
-            <div id="menu-bar-one"></div>
-            <div id="menu-bar-two"></div>
-            <div id="menu-bar-three"></div>
+</header>
+<div id="menu-button-wrapper" onclick="toggleNav()">
+    <div class="menu-button">
+        <div class="menu-button__bar-one"></div>
+        <div class="menu-button__bar-two"></div>
+        <div class="menu-button__bar-three"></div>
     </div>
-    <div class="cover fade">
-        <img class="cover-image" src="./images/optimized/contact_cover.jpg" alt="Jess and Costa Cover">
+</div>
+<main>
+    <div class="cover">
+        <img class="cover__image" src="./images/optimized/contact_cover.jpg" alt="Jess and Costa Cover">
     </div>
     <div class="content">
-        <div class="title"><h2>Contact</h2></div>
-        <div class="subtitle"><h3 style="font-style: italic; border: none;">We would be honored to capture your story!</h3></div>
-        <div class="primary-text">
-            <p>
+        <div class="content__title">Contact</div>
+        <div class="content__subtitle" id="contact-subtitle">We would be honored to capture your story!</div>
+        <div class="content__body">
+            <div class="content__paragraph">
                 Our home base is located in Acton, Maine, but we have a passion for travel and love exploring new places with our
                 clients. Some of the places we have already visited include California, the Dominican Republic, Ohio, Pennsylvania, 
                 and Florida, but we are always up for going to new places! 
-            </p>
-            <p>
-                All of our pricing information is available up front on our website on our <a href="./investments.html">Investments &amp; FAQ</a>
+            </div>
+            <div class="content__paragraph">
+                All of our pricing information is available up front on our website on our <a class="content__link" href="./investments.html">Investments &amp; FAQ</a>
                 page. We do not require a face-to-face meeting beforehand, especially if you live out-of-state, however, if you are local please
                 let us know in the form below and we would love to sit down with you over a cup of coffee as you plan out your vision for your
                 special day!
-            </p>
-            <p>
-                Brides and Grooms, please fill out the form below. For any other session inquiries, you can email us directly <a href="mailto:springwillowphotography@gmail.com">here</a>.
-            </p>
-            <p>
+            </div>
+            <div class="content__paragraph">
+                Brides and Grooms, please fill out the form below. For any other session inquiries, you can email us directly <a class="content__link" href="mailto:springwillowphotography@gmail.com">here</a>.
+            </div>
+            <div class="content__paragraph">
                 We are looking forward to connecting with you and will be in touch within the next 48 hours!
-            </p>
-        </div>
-        <div class="section">
-            <form id="contact-form" action="./contact.php" method="POST" autocomplete="off">
-                <input type="text" id="name" name="fullname" required placeholder="Full Name *">
-                <input type="text" id="email" name="emailaddress" required placeholder="Email Address *">
+            </div>
+            <form class="content__form"  action="./contact.php" method="POST" autocomplete="off">
+                <input type="text" id="name" name="fullname" placeholder="Full Name *" required>
+                <input type="text" id="email" name="emailaddress" placeholder="Email Address *" required>
                 <input type="text" id="phone" name="phonenumber" placeholder="Phone Number">
-                <input type="text" id="date" name="eventdate" required placeholder="Wedding or Event Date *">
-                <input type="text" id="location" name="venuelocation" required placeholder="Venue &amp; Location *">
+                <input type="text" id="date" name="eventdate" required placeholder="Wedding or Event Date *" required>
+                <input type="text" id="location" name="venuelocation" required placeholder="Venue &amp; Location *" required>
                 <input type="text" id="hear" name="aboutus" placeholder="How did you hear about us?">
-                <textarea id="subject" name="subject" required
-                placeholder="Please tell us a little bit about your story, location details, and vision for your special day. *"></textarea>
-
-                <input type="submit" value="Submit">
+                <textarea id="subject" name="subject" rows="6"
+                placeholder="Please tell us a little bit about your story, location details, and vision for your special day. *"
+                required></textarea>
+                <input class="action-button" type="submit" value="Submit">
             </form>
-            <div class="footnote">* Indicates a required field.</div>
+            <div class="content__footnote">
+                * Indicates a required field.
+            </div>
         </div>
     </div>
 </main>
 <footer>
-    <div class="icon-bar">
-        <a href="http://www.facebook.com/SpringWillowPhotography/" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.pinterest.com/SWP2016/" class="pinterest"><i class="fa fa-pinterest"></i></a>
-        <a href="https://instagram.com/_springwillowphotography_/" class="instagram"><i class="fa fa-instagram"></i></a>
+    <div class="social">
+        <a class="social__link" href="http://www.facebook.com/SpringWillowPhotography/"><i class="fa fa-facebook"></i></a>
+        <a class="social__link" href="https://www.pinterest.com/SWP2016/"><i class="fa fa-pinterest"></i></a>
+        <a class="social__link" href="https://instagram.com/_springwillowphotography_/"><i class="fa fa-instagram"></i></a>
     </div>
     <div class="copyright">
-        <p>&copy; Copyright 2018 Spring Willow Photography.</p>
-        <p>Website Design &copy; Copyright 2018 Zachary David Zinda.</p>
+        &copy; Copyright 2018 Spring Willow Photography. <br>
+        Website Design &copy; Copyright 2018 Zachary David Zinda.
     </div>
 </footer>
 </body>
