@@ -1,3 +1,6 @@
+$mobile-header-padding: 15px;
+$mobile-div-padding: 10px;
+
 .logo {
     flex-shrink: 2;
     margin-right: 15px;
@@ -9,10 +12,24 @@
     width: 24px;
 }
 
+.navigation {
+    &__list {
+        @include transition(width ease-in-out 300ms);
+        width: 75%;
+    }
+}
+
 .content {
+    width: 90%;
+
     &__title {
         font-size: $mobile-title-font-size;
     }
+
+    &__subtitle {
+        font-size: $mobile-subtitle-font-size;
+    }
+
     &__body {
         &-about {
             display: flex;
@@ -22,6 +39,14 @@
     }
     &__paragraph {
         font-size: $mobile-paragraph-font-size;
+
+        &-list-header {
+            font-size: $mobile-paragraph-font-size;
+        }
+
+        &-list-body {
+            font-size: $mobile-paragraph-font-size;
+        }
     }
     &__image {
         width: 75%;
@@ -31,6 +56,10 @@
 
 %mobile-test {
     border: 2px solid red;
+}
+
+.pricing {
+    font-size: $mobile-paragraph-font-size;
 }
 
 #about-image-1 {
@@ -43,11 +72,20 @@
     padding: 0 0 10px 0;
 }
 
+.action-button {
+    font-size: $mobile-paragraph-font-size;
+}
+
 .social {
     &__link {
         padding: $mobile-icon-padding;
         font-size: $mobile-icon-font-size;
     }
+}
+
+footer {
+    width: 100%;
+    padding: 0 10px;
 }
 
 .copyright {
