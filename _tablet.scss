@@ -127,6 +127,22 @@ header {
     flex-shrink: 3;
 }
 
+.content {
+    &__column {
+        width: 50%;
+        &-subcolumn {
+            padding: 0 5px;
+            width: 50%;
+        }
+    }
+}
+
+#portfolio-column-3 {
+    padding: 0;
+    flex-direction: row;
+    width: 100%;
+}
+
 .pricing {
     flex-direction: column;
 

@@ -4,103 +4,93 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashley &amp; Daniel Reed | Portfolio</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 1024px)" href="tablet.css">
-    <link rel="stylesheet" type="text/css" media="screen and (max-width: 600px)" href="mobile.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="fonts.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="./images/favicon.jpg" type="image/jpg" sizes="16x16">
     <script src="./mobile-navigation.js"></script>
 </head>
 <body>
 <header>
-    <div class="logo">
-        <h1>Spring Willow Photography</h1>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./portfolio.html">Portfolio</a></li>
-            <li><a href="./investments.html">Investments &amp; FAQs</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
-        </ul>
-    </nav>
-</header>
-<main>
-    <div id="mobile-menu">
-        <div class="overlay">
-            <div class="overlay-content">
-                <ul>
-                    <li id="first-link"><a href="./index.html">Home</a></li>
-                    <li><a href="./portfolio.html">Portfolio</a></li>
-                    <li><a href="./investments.html">Investments &amp; FAQs</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./contact.html">Contact</a></li>
-                    <li><a href="http://society6.com/springwillowphotography" target="_blank">Store</a></li>
-                </ul>
+    <div class="logo">Spring Willow Photography</div>
+    <div id="mobile-navigation-wrapper">
+        <div class="navigation">
+            <div class="navigation__list">
+                <a class="navigation__link" href="./index.html">Home</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./portfolio.html">Portfolio</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./investments.html">Investments &amp; FAQs</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./about.html">About</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="./contact.html">Contact</a>
+                <div class="navigation__list-spacer"></div>
+                <a class="navigation__link" href="http://society6.com/springwillowphotography" target="_blank">Store</a>
             </div>
         </div>
     </div>
-    <div class="menu-button" onclick="toggleNav(this)">
-            <div id="menu-bar-one"></div>
-            <div id="menu-bar-two"></div>
-            <div id="menu-bar-three"></div>
+</header>
+<div id="menu-button-wrapper" onclick="toggleNav()">
+    <div class="menu-button">
+        <div class="menu-button__bar-one"></div>
+        <div class="menu-button__bar-two"></div>
+        <div class="menu-button__bar-three"></div>
     </div>
-    <div class="cover spacer"></div>
+</div>
+<main>
+    <div class="no-cover-spacer"></div>
     <div class="content">
-        <div class="title"><h2>Portfolio</h2></div>
-        <div class="section" id="portfolio">
-            <div class="column fade first">
-                <img src="./images/portfolio/optimized/Kirsten_Joe_1.jpg">
-                <img src="./images/portfolio/optimized/Bryanna_Zane_1.jpg">
-                <img src="./images/portfolio/optimized/Nate_Olivia_1.jpg">
-                <img src="./images/portfolio/optimized/Murphy_1.jpg">
-                <img src="./images/portfolio/optimized/Jase_1.jpg">
-                <img src="./images/portfolio/optimized/Kirsten_Joe_2.jpg">
-                <img src="./images/portfolio/optimized/Natasha_Paul_3.jpg">
-                <img src="./images/portfolio/optimized/Nikki_Brian_2.jpg">
-                <img src="./images/portfolio/optimized/Nikki_Brian_1.jpg">
+        <div class="content__title">Portfolio</div>
+        <div class="content__body-portfolio">
+            <div class="content__column load-first">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Kirsten_Joe_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Bryanna_Zane_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Nate_Olivia_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Murphy_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Jase_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Kirsten_Joe_2.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Natasha_Paul_3.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Nikki_Brian_2.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Nikki_Brian_1.jpg">
             </div>
-            <div class="column fade second">
-                <img src="./images/portfolio/optimized/Ashley_Greg_1.jpg">
-                <img src="./images/portfolio/optimized/Tim_Jordan_1.jpg">
-                <img src="./images/portfolio/optimized/Natasha_Paul_2.jpg">
-                <img src="./images/portfolio/optimized/Nate_Olivia_2.jpg">
-                <img src="./images/portfolio/optimized/Murphy_3.jpg">
-                <img src="./images/portfolio/optimized/Jase_2.jpg">
-                <img src="./images/portfolio/optimized/Bryanna_Zane_2.jpg">
-                <img src="./images/portfolio/optimized/Natasha_Paul_4.jpg">
-                <img src="./images/portfolio/optimized/Jackie_Luke_2.jpg">
+            <div class="content__column load-second">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Ashley_Greg_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Tim_Jordan_1.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Natasha_Paul_2.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Nate_Olivia_2.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Murphy_3.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Jase_2.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Bryanna_Zane_2.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Natasha_Paul_4.jpg">
+                <img class="portfolio-image" src="./images/portfolio/optimized/Jackie_Luke_2.jpg">
             </div>
-            <div class="column fade third" id="col-3">
-                <div class="sub-column">
-                    <img src="./images/portfolio/optimized/Grant_1.jpg">
-                    <img src="./images/portfolio/optimized/Layla_Eric_1.jpg">
-                    <img src="./images/portfolio/optimized/Tim_Jordan_2.jpg">
-                    <img src="./images/portfolio/optimized/Ashley_Greg_2.jpg">
-                    <img src="./images/portfolio/optimized/Natasha_Paul_1.jpg">
-                    <img src="./images/portfolio/optimized/Jackie_Luke_1.jpg">
+            <div class="content__column load-third" id="portfolio-column-3">
+                <div class="content__column-subcolumn">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Grant_1.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Layla_Eric_1.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Tim_Jordan_2.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Ashley_Greg_2.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Natasha_Paul_1.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Jackie_Luke_1.jpg">
                 </div>
-                <div class="sub-column">
-                    <img src="./images/portfolio/optimized/Murphy_2.jpg">
-                    <img src="./images/portfolio/optimized/Charis_Mae_1.jpg">
-                    <img src="./images/portfolio/optimized/Layla_Eric_2.jpg">
+                <div class="content__column-subcolumn">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Murphy_2.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Charis_Mae_1.jpg">
+                    <img class="portfolio-image" src="./images/portfolio/optimized/Layla_Eric_2.jpg">
                 </div>
             </div>
         </div>
     </div>
 </main>
 <footer>
-    <div class="icon-bar">
-        <a href="http://www.facebook.com/SpringWillowPhotography/" class="facebook"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.pinterest.com/SWP2016/" class="pinterest"><i class="fa fa-pinterest"></i></a>
-        <a href="https://instagram.com/_springwillowphotography_/" class="instagram"><i class="fa fa-instagram"></i></a>
+    <div class="social">
+        <a class="social__link" href="http://www.facebook.com/SpringWillowPhotography/"><i class="fa fa-facebook"></i></a>
+        <a class="social__link" href="https://www.pinterest.com/SWP2016/"><i class="fa fa-pinterest"></i></a>
+        <a class="social__link" href="https://instagram.com/_springwillowphotography_/"><i class="fa fa-instagram"></i></a>
     </div>
     <div class="copyright">
-        <p>&copy; Copyright 2018 Spring Willow Photography.</p>
-        <p>Website Design &copy; Copyright 2018 Zachary David Zinda.</p>
+        &copy; Copyright 2018 Spring Willow Photography. <br>
+        Website Design &copy; Copyright 2018 Zachary David Zinda.
     </div>
 </footer>
 </body>

@@ -49,6 +49,13 @@ $mobile-div-padding: 10px;
         }
     }
 
+    &__column {
+        width: 100%;
+        &-subcolumn {
+            width: 100%;
+        }
+    }
+
     &__footnote {
         font-size: $mobile-paragraph-font-size;
     }
@@ -57,6 +64,10 @@ $mobile-div-padding: 10px;
 
 %mobile-test {
     border: 2px solid red;
+}
+
+#portfolio-column-3{
+    flex-direction: column;
 }
 
 .pricing {
@@ -87,7 +98,7 @@ input {
 
 footer {
     width: 100%;
-    padding: 0 10px;
+    padding: 10px;
 }
 
 .social {

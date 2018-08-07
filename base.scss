@@ -2,6 +2,9 @@
 @import 'mixins';
 @import 'animations';
 
+/* Fonts */
+@import 'fonts';
+
 // Text & Font
 $main-font-stack: 'Georgia', 'Times New Roman', serif;
 $decorative-font: 'DancingScriptOT';
@@ -177,7 +180,6 @@ main {
     max-height: 100vh;
     margin-bottom: 15px;
     overflow: hidden;
-    @include animation(fade 2s);
 
     &__image {
         @extend %fill-superview;
@@ -206,10 +208,20 @@ main {
     &__body {
         @extend %top-space;
         flex-direction: column;
+        flex-wrap: wrap;
 
         &-about {
             @extend %top-space;
+            flex-wrap: wrap;
             display: block;
+        }
+
+        &-portfolio {
+            @extend %top-space;
+            @extend %bottom-space;
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
     }
 
@@ -234,6 +246,19 @@ main {
             @extend %content__paragraph;
             font-size: $main-paragraph-font-size;
             padding-left: 15px;
+        }
+    }
+
+    &__column {
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 33%;
+        padding: 0 5px;
+        overflow: hidden;
+
+        &-subcolumn {
+            flex-direction: column;
+            flex-wrap: wrap;
         }
     }
 
@@ -281,35 +306,6 @@ main {
     }
 }
 
-.pricing {
-    @extend %full-center;
-    font-size: $main-paragraph-font-size;
-    &__list-item {
-        margin: 0 10px;
-    }
-}
-
-#faq-title {
-    padding-bottom: 10px;
-    border: solid $green;
-    border-width: 0 0 1px 0;
-}
-
-#about-image-1 {
-    float: right;
-    padding: 0 0 0 15px;
-}
-
-#about-image-2 {
-    float: left;
-    padding: 0 15px 0 0;
-}
-
-#contact-subtitle {
-    font-style: italic;
-    border: none;
-}
-
 .action-button {
     @extend %full-center;
     min-width: 200px;
@@ -325,6 +321,7 @@ main {
     @extend %button-transition;
 
     &:hover {
+        cursor: pointer;
         background-color: $green;
         color: #fff;
     }
@@ -334,10 +331,60 @@ main {
     }
 }
 
+/* Portfolio Specific */
+.no-cover-spacer {
+    @extend %top-space;
+    height: $header-main-height;
+}
+.portfolio-image {
+    @extend %top-space;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    padding: 0px;
+    opacity: 1;
+    @include transition(opacity 0.2s ease-in);
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+/* Investments & FAQ Specific */
+.pricing {
+    @extend %full-center;
+    font-size: $main-paragraph-font-size;
+    &__list-item {
+        margin: 0 10px;
+    }
+}
+
+#faq-title {
+    padding-bottom: 10px;
+    border: solid $green;
+    border-width: 0 0 1px 0;
+}
+
+/* About Specific */
+#about-image-1 {
+    float: right;
+    padding: 0 0 0 15px;
+}
+
+#about-image-2 {
+    float: left;
+    padding: 0 15px 0 0;
+}
+
+/* Contact Specific */
+#contact-subtitle {
+    font-style: italic;
+    border: none;
+}
+
 %form-input {
     min-height: 35px;
-    display: flex;
-    align-items: flex-end;
+    font-size: $main-paragraph-font-size;
     font-style: italic;
     color: $green;
     outline: none;
@@ -346,7 +393,6 @@ main {
 
 input {
     @extend %form-input;
-    font-size: $main-paragraph-font-size;
     border: 0 solid $green;
     border-bottom-width: 1px;
     margin-top: 5px;
@@ -410,6 +456,3 @@ $mobile-icon-padding: 0 10px;
 @media screen and (max-width: 600px) {
     @import 'mobile';
 }
-
-/* Fonts */
- @import 'fonts';
